@@ -1,0 +1,19 @@
+<br>
+<h3>Zapisywanie pliku CSV</h3>
+
+<form>
+    <div>
+        <label class="center">Podaj ile książek wstawić do pliku:</label>
+        <input class="center-block" type="number" [(ngModel)]="file.numberOfRecordsToTake" name="NumberOfRecordsToTake"> <br>
+
+        <label class="center">Podaj ile pominąć:</label>
+        <input class="center-block" type="number" [(ngModel)]="file.skip" name="Skip"><br>
+
+        <label class="center">Podaj słowo klucz:</label>
+        <input class="center-block" type="text" [(ngModel)]="file.filteredBooks" name="FilteredBooks">
+
+        <div class="center">
+            <button (click)="WriteFile()">Zapisz Plik</button>
+        </div>
+    </div>
+</form> <br><br><br>

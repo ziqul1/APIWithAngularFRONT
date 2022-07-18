@@ -1,3 +1,5 @@
+import { FileWriteComponent } from './components/file-write/file-write.component';
+import { FileReadComponent } from './components/file-read/file-read.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookAddAsyncComponent } from './components/book-add-async/book-add-async.component';
@@ -10,9 +12,10 @@ const routes: Routes = [
   { path: 'DeleteBookAsync', component: BookDeleteAsyncComponent },
   { path: 'GetSingleBookAsync', component: BookGetSingleAsyncComponent },
   { path: 'GetBooksAsync', component: BookGetAllAsyncComponent },
+  { path: 'ReadFile', component: FileReadComponent },
+  { path: 'WriteFile', component: FileWriteComponent },
   { path: '', redirectTo: '', pathMatch: 'full' }
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

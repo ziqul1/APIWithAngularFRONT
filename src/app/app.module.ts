@@ -10,6 +10,9 @@ import { BookGetSingleAsyncComponent } from './components/book-get-single-async/
 import { BookFunctionsComponent } from './components/book-functions/book-functions.component';
 import { BookDeleteAsyncComponent } from './components/book-delete-async/book-delete-async.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FileReadComponent } from './components/file-read/file-read.component';
+import { FileWriteComponent } from './components/file-write/file-write.component';
+import { FileFunctionsComponent } from './components/file-functions/file-functions.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BookDeleteAsyncComponent,
     BookGetAllAsyncComponent,
     BookGetSingleAsyncComponent,
-    BookFunctionsComponent
+    BookFunctionsComponent,
+    FileReadComponent,
+    FileWriteComponent,
+    FileFunctionsComponent
   ],
   imports: [
     BrowserModule,
