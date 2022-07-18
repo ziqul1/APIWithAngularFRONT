@@ -1,0 +1,15 @@
+<form>
+  <div >
+    <br><br><label class="center">Podaj ID książki:</label>
+    <input class="center-block" type="number" [(ngModel)]="book.id" name="bookId"><br>
+    <label class="center">Podaj tytuł:</label>
+    <input class="center-block" type="text" [(ngModel)]="book.title" name="bookTitle"><br>
+    <label class="center">Podaj cenę:</label>
+    <input class="center-block" type="number" [(ngModel)]="book.price" name="bookPrice">
+
+    <div class="center">
+      <button (click)="CreateBookAsync()">Dodaj</button>
+    </div>
+  </div>
+</form>
+<br><br><br>
