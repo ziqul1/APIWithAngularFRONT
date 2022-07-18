@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/models/book';
+import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-book-delete-async',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookDeleteAsyncComponent implements OnInit {
 
-  constructor() { }
+  book: Book = { id: 0, title: '', price: 0 };
+
+  constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
+  }
+
+  DeleteBookAsync() {
+    this.bookService.DeleteBookAsync(this.book.id).subscribe();
   }
 
 }

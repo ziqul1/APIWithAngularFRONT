@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'CreateBookAsync', component: BookAddAsyncComponent },
   { path: 'DeleteBookAsync', component: BookDeleteAsyncComponent },
   { path: 'GetSingleBookAsync', component: BookGetSingleAsyncComponent },
-  { path: 'DeleteBookAsync', component: BookGetAllAsyncComponent },
+  { path: 'GetBooksAsync', component: BookGetAllAsyncComponent },
   { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 

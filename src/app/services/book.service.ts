@@ -24,7 +24,7 @@ export class BookService {
   }
 
   GetSingleBookAsync(id: number): Observable<Book> {
-    return this.http.get<Book>(this.bookURL + id);
+    return this.http.get<Book>(this.bookURL + "/" + id);
   }
 
   CreateBookAsync(book: Book): Observable<Book> {
@@ -32,7 +32,7 @@ export class BookService {
   }
 
   DeleteBookAsync(id: number): Observable<Book> {
-    return this.http.delete<Book>(this.bookURL + id);
+    return this.http.delete<Book>(this.bookURL + "/" + id);
   }
 
 }

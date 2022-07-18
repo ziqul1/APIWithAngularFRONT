@@ -1,1 +1,11 @@
-<p>book-delete-async works!</p>
+<form>
+    <div>
+        <br><br><label class="center">Podaj ID książki do usunięcia:</label>
+        <input class="center-block" type="number" [(ngModel)]="book.id" name="bookId"><br>
+
+        <div class="center">
+            <button (click)="DeleteBookAsync()">Usuń</button>
+        </div>
+    </div>
+</form>
+<br><br><br>
