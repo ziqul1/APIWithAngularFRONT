@@ -23,8 +23,8 @@ export class LoginFunctionsComponent implements OnInit {
   }
   
   logOut = () => {
-    this.router.navigate(["https://localhost:7185"]);
     localStorage.removeItem("jwt");
+    this.router.navigate(["https://localhost:4200/login"]);
   }
 
 }
