@@ -1,0 +1,23 @@
+<br>
+<div *ngIf="isUserAuthenticated()">
+    <h2>
+        YOU ARE LOGGED IN
+    </h2>
+
+    <app-book-functions></app-book-functions>
+    <app-file-functions></app-file-functions>
+</div>
+
+<br>
+<ul>
+    <div *ngIf="!isUserAuthenticated()">
+        <h1>Library Home Page</h1>
+        <li>
+            <a routerLink="/login">Login</a>
+        </li>
+    </div>
+    <li *ngIf="isUserAuthenticated()">
+        <a class="logout" (click)="logOut()">Log out</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>

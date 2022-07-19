@@ -13,6 +13,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileReadComponent } from './components/file-read/file-read.component';
 import { FileWriteComponent } from './components/file-write/file-write.component';
 import { FileFunctionsComponent } from './components/file-functions/file-functions.component';
+import { JwtModule } from "@auth0/angular-jwt";
+import { LoginComponent } from './components/login/login.component';
+import { LoginFunctionsComponent } from './components/login-functions/login-functions.component';
+import { AuthGuardService } from './guards/auth-guard.service';
+
+export function tokenGetter() { 
+  return localStorage.getItem("jwt"); 
+}
 
 @NgModule({
   declarations: [
@@ -24,16 +32,25 @@ import { FileFunctionsComponent } from './components/file-functions/file-functio
     BookFunctionsComponent,
     FileReadComponent,
     FileWriteComponent,
-    FileFunctionsComponent
+    FileFunctionsComponent,
+    LoginComponent,
+    LoginFunctionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["localhost:7185"],
+        disallowedRoutes: []
+      }
+    })
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
